@@ -1,0 +1,41 @@
+{
+  "name": "photonsh/photon-php",
+  "type": "library",
+  "description": "photon-php is a PHP library for Photon",
+  "keywords": [
+    "photon",
+    "highlight",
+    "syntax",
+    "php"
+  ],
+  "homepage": "https://photon.sh",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Photon",
+      "email": "support@photon.sh",
+      "homepage": "https://photon.sh",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~5.6|~7.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Photonsh\\PhotonPhp\\": "src"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
+    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
